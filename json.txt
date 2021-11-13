@@ -1,0 +1,170 @@
+ ================================  save or update employee ================================ 
+  
+ ENDPOINT : http://localhost:8080/api/v1/employee/save 
+ TYPE :POST
+ REQUEST :
+ {
+"emprfnum": "13",
+"firstName":"Kalpesh",
+"lastName":"Chande",
+"email":"kalpesh@gmail.com",
+"mobile":"9421148475",
+"designation":"java developer",
+"salary":100.00,
+"gender":"M",
+"dateOfBirth":"20/03/1998",
+"department":{
+"deptrfnum":1
+},
+"address" :{
+"city":"chiplun",
+"state":"Maharashtra",
+"country":"India",
+"zipcode":415605
+}
+}
+ RESPONSE:
+ {
+    "status": "SUCCESS",
+    "statusCode": 0,
+    "message": "RECORD SAVED",
+    "data": {
+        "emprfnum": 13,
+        "firstName": "Kalpesh",
+        "lastName": "Chande",
+        "empId": "EMP000013",
+        "email": "kalpesh@gmail.com",
+        "mobile": "9421148475",
+        "designation": "java developer",
+        "salary": 100.00,
+        "gender": "M",
+        "address": {
+            "city": "chiplun",
+            "state": "Maharashtra",
+            "country": "India",
+            "zipcode": "415605"
+        },
+        "department": {
+            "deptrfnum": 1,
+            "deptName": "INFORMATION TECHNOLOGY",
+            "deptCode": "IT"
+        },
+        "dateOfBirth": "20/03/1998"
+    }
+}
+  
+ ================================ get employee by id ================================ 
+   
+ ENDPOINT : http://localhost:8080/api/v1/employee/employees/11
+ TYPE :GET
+ 
+ RESPONSE:
+ {
+    "status": "SUCCESS",
+    "statusCode": 0,
+    "message": "RECORD FOUND",
+    "data": {
+        "emprfnum": 11,
+        "firstName": "Manoj",
+        "lastName": "Kadam",
+        "empId": "EMP000011",
+        "email": "kadammanoj111@gmail.com",
+        "mobile": "8554906835",
+        "designation": "java developer",
+        "salary": 100.00,
+        "gender": "M",
+        "address": {
+            "city": "chiplun",
+            "state": "Maharashtra",
+            "country": null,
+            "zipcode": "415605"
+        },
+        "department": {
+            "deptrfnum": 1,
+            "deptName": "INFORMATION TECHNOLOGY",
+            "deptCode": "IT"
+        },
+        "dateOfBirth": "20/03/1998"
+    }
+}
+   
+ ================================  get all employees======================================
+   
+ ENDPOINT : http://localhost:8080/api/v1/employee/employees/
+ TYPE :GET
+ 
+ RESPONSE:
+ [
+    {
+        "emprfnum": 11,
+        "firstName": "Manoj",
+        "lastName": "Kadam",
+        "empId": "EMP000011",
+        "email": "kadammanoj111@gmail.com",
+        "mobile": "8554906835",
+        "designation": "java developer",
+        "salary": 100.00,
+        "gender": "M",
+        "address": {
+            "city": "chiplun",
+            "state": "Maharashtra",
+            "country": null,
+            "zipcode": "415605"
+        },
+        "department": {
+            "deptrfnum": 1,
+            "deptName": "INFORMATION TECHNOLOGY",
+            "deptCode": "IT"
+        },
+        "dateOfBirth": "20/03/1998"
+    },
+    {
+        "emprfnum": 13,
+        "firstName": "Kalpesh",
+        "lastName": "Chande",
+        "empId": "EMP000013",
+        "email": "kalpesh@gmail.com",
+        "mobile": "9421148475",
+        "designation": "java developer",
+        "salary": 100.00,
+        "gender": "M",
+        "address": {
+            "city": "chiplun",
+            "state": "Maharashtra",
+            "country": "India",
+            "zipcode": "415605"
+        },
+        "department": {
+            "deptrfnum": 1,
+            "deptName": "INFORMATION TECHNOLOGY",
+            "deptCode": "IT"
+        },
+        "dateOfBirth": "20/03/1998"
+    }
+]
+
+ =========================== get all departments ==================================
+   
+ ENDPOINT :http://localhost:8080/api/v1/employee/departments
+ TYPE :GET
+ 
+ RESPONSE:
+[
+    {
+        "deptrfnum": 1,
+        "deptName": "INFORMATION TECHNOLOGY",
+        "deptCode": "IT",
+        "isactive": "Y",
+        "createdate": "2021-10-31T11:07:13",
+        "modidate": "2021-10-31T11:07:13"
+    },
+    {
+        "deptrfnum": 2,
+        "deptName": "COMPUTER SCIENCE",
+        "deptCode": "CS",
+        "isactive": "Y",
+        "createdate": "2021-10-31T11:07:45",
+        "modidate": "2021-10-31T11:07:45"
+    }
+]
+   
